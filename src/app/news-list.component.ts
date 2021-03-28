@@ -4,10 +4,9 @@ import { NewsService } from './news.service';
 @Component({
   selector: 'news-list',
   template: `
-    her er en liste...
-
+    <h1>her er en liste...</h1>
     <news-list-item *ngFor="let item of data" [name]="item.title"></news-list-item>
-
+    <p></p>
   `
 })
 export class NewsListComponent implements OnInit {
@@ -19,7 +18,6 @@ export class NewsListComponent implements OnInit {
       this.data = data['articles'];
     });
   }
-
 
   constructor(private news: NewsService) { }
 }
